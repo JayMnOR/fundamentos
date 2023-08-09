@@ -1,0 +1,56 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    float cantidada;
+    float cantidadb;
+    float sumar;
+    float restar;
+    float multiplicar;
+    float dividir;
+    string operacion;
+
+cout <<"Hello fellas"<< endl;
+cout <<"Ingresa el primer numero, my fella"<< endl;
+cin >> cantidada;
+
+cout <<"Ingresa el segundo numero, my fella"<< endl;
+cin >> cantidadb;
+
+sumar=cantidada+cantidadb;
+restar=cantidada-cantidadb;
+multiplicar=cantidada*cantidadb;
+dividir=cantidada/cantidadb;
+
+cout <<"Coloca una de estas operaciones segun lo que quieras hacer"<< endl;
+cout <<"de forma literal sino no sirve :c"<< endl;
+cout <<"sumar restar multiplicar dividir o todas"<< endl;
+    cin>> operacion;
+ 
+        if (operacion=="sumar"){
+        cout << "el resultado es"<< sumar << endl;
+        }
+ 
+        if (operacion=="restar"){
+        cout << "el resultado es"<< restar << endl;
+        }
+        
+        if (operacion=="multiplicar"){
+        cout << "el resultado es"<< multiplicar << endl;
+        }
+        
+        if (operacion=="dividir"){
+        cout << "el resultado es"<< dividir << endl;
+        }
+        
+        if (operacion=="todas")
+        {
+          cout << "la suma es "<< sumar << endl;  
+         cout << "la resta es "<< restar << endl;  
+          cout << "la multiplicacion es "<< multiplicar << endl;  
+          cout << "la division es "<< dividir << endl;  
+
+        }
+    return 0;
+}
