@@ -1,0 +1,76 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+  float lado;
+  float area1;
+  float base1;
+  float altura1;
+  float area2;
+  float base2;
+  float altura2;
+  float area3;
+  float diagonalma;
+  float diagonalme;
+  float area4;
+  float radio;
+  string figura;
+  
+  
+  cout<<"coloca textualmente el nombre de una de estas 3 figuras"<< endl;
+  cout << "triangulo, rectangulo, cuadrado, rombo"<< endl;
+  cin >> figura;
+  
+  if (figura=="triangulo")
+    {
+      cout<<"coloca porfavor el valor de tu base"<<endl;
+      cin>> base2;
+      cout<<"coloca porfavor el valor de tu altura"<<endl;
+      cin>> altura2;
+        area3= (base2*altura2)/2;
+
+      cout<<"El area del triangulo es"<< endl;
+      cout <<area3<< "cm cuadrados"<< endl; 
+    }
+    
+
+  if (figura=="rectangulo")
+    {
+      cout<<"coloca porfavor el valor de tu base"<<endl;
+      cin>> base1;
+      cout<<"coloca porfavor el valor de tu altura"<<endl;
+      cin>> altura1;
+        area2= base1*altura1;
+
+      cout<<"El area del rectangulo es"<< endl;
+      cout <<area2<< "cm cuadrados"<< endl; 
+    }
+    
+
+  if (figura=="cuadrado")
+    {
+       cout<<"coloca porfavor el valor del lado"<<endl;
+      cin>> lado;
+        area1= lado * lado; 
+
+      cout<<"El area del cuadrado es"<< endl;
+      cout <<area1<< "cm cuadrados"<< endl; 
+      
+    } 
+        
+    if (figura=="rombo")
+    {
+       cout<<"coloca porfavor el valor de la diagonal Mayor"<<endl;
+      cin>> diagonalma;
+        cout<<"coloca porfavor el valor de la diagonal Menor"<<endl;
+      cin>> diagonalme;
+        area4= (diagonalme * diagonalma)/2; 
+
+      cout<<"El area del cuadrado es"<< endl;
+      cout <<area4<< "cm cuadrados"<< endl; 
+      
+    }   
+    return 0;
+}
