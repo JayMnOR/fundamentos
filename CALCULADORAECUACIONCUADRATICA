@@ -1,0 +1,53 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main() {
+    float A,B,C, D, SU, XI1, XI2, SI, SD1, SD2;
+    
+    cout<<"CALCULADORA DE ECUACION CUADRATICA"<<endl;
+    cout<<"Porfavor ingresa el valor de A en la ecuacion Ax²+Bx+C"<<endl;
+     cin>>A ;   
+    if (A==0) {cout<<"No es una ecuacion cuadratica"<<endl;}
+
+    else
+   {
+    cout<<"Porfavor ingresa el valor de B en la ecuacion Ax²+Bx+C"<<endl;
+    cin>>B;
+    cout<<"Porfavor ingresa el valor de C en la ecuacion Ax²+Bx+C"<<endl;
+    cin>>C;
+    
+    D=((B*B)-(4*A*C));
+    
+    SU=(-B/(2*A));
+    
+    SI=(-1*D);
+    XI1=((sqrt(SI))/2);
+    XI2=((sqrt(SI))/2);
+
+    SD1=(-B+(sqrt(D)))/(2*A);
+    SD2=(-B-(sqrt(D)))/(2*A);
+    
+    if (D<0){
+     cout<<"la ecuacion Ax²+Bx+C . . ."<<endl;
+     cout<<"Tiene 2 valores que imaginarios la satisfacen"<<endl;
+     cout<<"Primer valor de X= "<<SU<<" +  (√-"<<SI<<"/"<<(2*A)<<")"<<endl;
+     cout<<"Segundo valor de X= "<<SU<<" - (√-"<<SI<<"/"<<(2*A)<<")"<<endl;
+     cout<<"Sus aproximados son"<<endl;
+     cout<<"Primer X: " <<SU<<" +  "<< XI1<<" i"<< endl;
+     cout<<"Segunda X: " <<SU<<"  -  "<< XI2<<" i"<< endl;
+    }
+    else if (D==0) {
+       cout<<"la ecuacion Ax²+Bx+C . . ."<<endl;
+     cout<<"Tiene 1 solo valor real que la satisface"<<endl;
+     cout<<"Valor de X="<<SU<<endl;
+    }
+    else if (D>0) {
+       cout<<"la ecuacion Ax²+Bx+C . . ."<<endl;
+     cout<<"Tiene 2 valores  reales que la satisfacen"<<endl;
+    cout<<"Primer valor de X= "<<SD1<<endl;
+     cout<<"Segundo valor de X= "<<SD2<<endl;
+    }
+   }
+    return 0;
+}
