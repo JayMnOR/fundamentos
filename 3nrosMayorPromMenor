@@ -1,0 +1,37 @@
+
+#include <iostream>
+using namespace std;
+
+int main()
+{ float prom; prom=0;
+int n, nn, nr, ns, c; c=1; 
+bool panchito, pepe; pepe=0; panchito=1;
+
+do {
+    if (panchito=0) {cout<<"Ingrese una cantidad válida:"<<endl;}
+    else if (panchito=1) {cout<<"¿Cuantos numeros quieres ingresar?"<<endl;}
+    cin>>n;
+    panchito=0;
+} while(n<=0);
+ 
+ while(c<=n){
+     
+     do{
+     cout<<"Ingrese la cantidad "<<c<<"a:  "<<endl; cin>>nn;
+     if ((nn<0)||(nn>100)); {cout<<"Ingrese un numero entre 0 y 100"<<endl;}
+     } while((nn<0)||(nn>100));
+     
+     if (pepe=0){nr=nn; ns=nn;}
+     prom=prom + nn;
+     if (nn<nr) {nr=nn;}
+     if (nn>ns) {ns=nn;}
+     c++; pepe=1;}
+     
+     prom=prom/n;
+     cout<<"El promedio es: "<<prom<<endl;
+     cout<<"El numero menor es: "<<nr<<endl;
+     cout<<"El numero mayor es: "<<ns<<endl;
+    cout<<"";
+
+    return 0;
+}
