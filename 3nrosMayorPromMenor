@@ -8,8 +8,8 @@ int n, nn, nr, ns, c; c=1;
 bool panchito, pepe; pepe=0; panchito=1;
 
 do {
-    if (panchito=0) {cout<<"Ingrese una cantidad válida:"<<endl;}
-    else if (panchito=1) {cout<<"¿Cuantos numeros quieres ingresar?"<<endl;}
+    if (panchito==0) {cout<<"Ingrese una cantidad válida:"<<endl;}
+    else if (panchito==1) {cout<<"¿Cuantos numeros quieres ingresar?"<<endl;}
     cin>>n;
     panchito=0;
 } while(n<=0);
@@ -21,7 +21,7 @@ do {
      if ((nn<0)||(nn>100)); {cout<<"Ingrese un numero entre 0 y 100"<<endl;}
      } while((nn<0)||(nn>100));
      
-     if (pepe=0){nr=nn; ns=nn;}
+     if (pepe==0){nr=nn; ns=nn;}
      prom=prom + nn;
      if (nn<nr) {nr=nn;}
      if (nn>ns) {ns=nn;}
