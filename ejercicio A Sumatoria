@@ -1,0 +1,36 @@
+// ConsoleApplication1.cpp : Este archivo contiene la función "main". La ejecución del programa comienza y termina ahí.
+ #include <iostream>
+using namespace std;
+int main() {
+	bool puerta1;
+	int N, M, C;
+	float SN, PN;
+	SN = 0;
+	C = 0;
+	puerta1 = 0;
+	cout << "Hola amigo :D" << endl;
+	cout << "Porfavor, ingrese el número de partida que desee utilizar: " << endl; cin >> N;
+
+	do {
+		if (puerta1 == 0) {
+			cout << "Gracias amigo, ahora ingresa porfavor el numero de llegada: " << endl;
+			puerta1 = 1;
+		}
+		else {
+			cout << "Porfavor ingrese un número válido (mayor o igual que " << N << " ): " << endl;
+		}
+		cin >> M;
+	} while (N > M);
+
+	C = N;
+
+	while (C < M) {
+		SN = SN + C;
+		C++;
+	}
+	PN = SN / (M - N + 1);
+	cout << "La sumatoria de todos los numeros es igual a: " << SN << endl;
+	cout << "El promedio de todos los numeros es igual a: " << PN << endl;
+
+	return 0;
+}
