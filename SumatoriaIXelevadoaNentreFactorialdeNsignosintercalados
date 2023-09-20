@@ -4,13 +4,13 @@ using namespace std;
 
 int main()
 {
-	float x, acum; int c; int n; int f;  float res;
-	c = 1; f = 1; res = 0;
+	float x, acum, res; int c, n, f;  
+	 f = 1; res = 0;
 	cout << "Porfavor, ingrese hasta que enesimo exponente colocar en la secuencia";
 	do { cin >> n; if (n < 0) { cout << "Ingrese un numero valido, porfavor:" << endl; } }while(n < 0);
 
 	cout << "Porfavor, ingrese el valor de la variable que desea colocar en la secuencia";
-		do { cin >> x; if (x < 0) cout << "Ingrese un numero valido, porfavor:" << endl; } while (x < 0);
+		cin >> x;
 	for (c = 1; c <= n; c++) {
 		f = f * c;
 		acum = ((pow(x, c)) / f ) * pow(-1, c + 1);
