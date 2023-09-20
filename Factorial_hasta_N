@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int N, c, acum ;
+	c = 1; acum = 1;
+	do {
+		cout << "Ingrese el nro de elementos: ";
+		cin >> N;
+	} while (N <= 0);
+
+	for (c = 1; c <= N; c++)
+	{
+		acum = acum * c;
+		
+	}
+
+	cout << "El producto de los enteros hasta el numero " << N << " es igual a: " << acum << endl;
+	return 0;
+}
