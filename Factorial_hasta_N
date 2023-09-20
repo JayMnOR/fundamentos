@@ -10,7 +10,12 @@ int main()
 	} while (N <= 0);
 
 	for (c = 1; c <= N; c++)
-	{
+	{ 
+		if (c<N) { 		cout << c << " x ";
+		}
+		else { cout << c <<"  "; }
+		
+
 		acum = acum * c;
 		
 	}
