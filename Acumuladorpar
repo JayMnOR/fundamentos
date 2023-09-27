@@ -1,0 +1,22 @@
+#include <iostream>
+ using namespace std;
+
+int main()
+{
+    int n, i, par, impar;
+    par=0; impar=0;
+    cout<<"Ingrese un valor numerico entero positivo"<<endl;
+    cin>>n;
+    system ("clear");
+    for (int i=2; i<=n; i+=2){
+        {cout<<i<<endl;
+        par=par+i;}
+        for (int i=1;i<=n;i+=2)
+        {cout<<i<<endl;
+            impar=impar+i;
+        }
+        cout<<"La fuma se los numeros pares es: "<<par<<endl;
+        cout<<"La fuma se los numeros impares es: "<<impar<<endl;
+    }
+    return 0;
+}
