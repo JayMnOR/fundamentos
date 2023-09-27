@@ -1,0 +1,30 @@
+#include <iostream>
+ using namespace std;
+
+int main()
+{
+    int n, i; float e1, e2, e3; char p;
+    do{
+    cout<<"Ingrese el numero de alumnos, porfavor"<<endl;
+        cin>>n; if (n<=0) cout<<"Ingrese un numero valido porfavor"<<endl;
+    } while(n<=0);
+    system ("clear");
+    for (i=1; i<=n; i++){
+    {
+     do{
+    cout<<"Ingrese la nota del primer examen del alumno "<<i<<" porfavor"<<endl;
+        cin>>e1; if ((e1<0)||(e1>100)) cout<<"Ingrese un numero valido porfavor"<<endl; } while(n<=0);
+    do{
+    cout<<"Ingrese la nota del segundo examen del alumno "<<i<<" porfavor"<<endl;
+        cin>>e2; if ((e2<0)||(e2>100)) cout<<"Ingrese un numero valido porfavor"<<endl;} while(n<=0);
+        do{
+    cout<<"Ingrese la nota del tercer examen del alumno "<<i<<" porfavor"<<endl;
+        cin>>e3; if ((e3<0)||(e3>100)) cout<<"Ingrese un numero valido porfavor"<<endl;} while(n<=0);
+    }
+    cout<<"el promedio del alumno "<< i <<"es igual a "<< ((e1+e2+e3)/3)<<endl;
+    cout<<"¿Quieres pasar al siguiente alumno, pulsa cualquier letra? ";cin>>p;
+        system ("clear");
+
+     }
+    return 0;
+}
