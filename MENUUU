@@ -1,0 +1,54 @@
+#include <iostream>
+using namespace std;
+int Digito(int n);
+
+float suma(float n, float m);
+float multiplicar(float n, float m);
+float resta(float n, float m);
+
+int main() {
+	int opcion; float n, m;
+	do {
+		cout << "Porfavor, selecciona de la lista que deseas hacer:" << endl;
+		cout << "1. Sumar" << endl << "2. Restar" << endl << "3. Multiplicar" << endl;
+		cin >> opcion;
+		cout << "Porfavor, ingresa un primer numero: "; cin >> n;
+		cout << "Porfavor, ingresa un segundo numero: "; cin >> m;
+		switch (opcion) {
+		case 1: {
+			cout << "El resultado de la suma es: " << suma(n, m); break; }
+
+		case 2: {
+			cout << "El resultado de la resta es: " << resta(n, m); }
+			  break;
+
+
+		case 3: {
+			cout << "El resultado de la multiplicacion es: " << multiplicar(n, m); }
+			  break;
+		}
+		cout << "¿desea calcular algo mas?, teclee 1 para si, y 2 para no" << endl;
+		cin >> opcion;
+	} while (opcion == 1);
+}
+
+
+
+
+float suma(float n, float m) {
+	float r;
+	r = n + m;
+	return r;
+}
+
+float multiplicar(float n, float m) {
+	float r;
+	r = n * m;
+	return r;
+}
+
+float resta(float n, float m) {
+	float r;
+	r = n - m;
+	return r;
+}
