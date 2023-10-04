@@ -8,8 +8,8 @@ int main() {
 	cin >> n;
 	cout << "La suma de los digitos del numero ingresado es igual a: " << endl;
 	num = n;
-	for (int c = 1; num>0; c) {
-		cout << Digito(num) << " + " ;
+	for (int c = 1; num > 0; c) {
+		cout << Digito(num) << " + ";
 		re = re + Digito(num);
 		num = num / 10;
 	}
