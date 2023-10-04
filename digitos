@@ -1,11 +1,6 @@
 #include <iostream>
 using namespace std;
-
-int dig(int n) {
-	int d; 
-	d = n % 10;
-	return d;
-}
+int digito(int n);
 
 int main() {
 	int n, num, re; re = 0;
@@ -20,4 +15,10 @@ int main() {
 	}
 	cout << " = " << re;
 
+}
+
+int digito(int n) {
+	int d;
+	d = n % 10;
+	return d;
 }
