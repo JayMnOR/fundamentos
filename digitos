@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int dig(int n) {
+	int d; 
+	d = n % 10;
+	return d;
+}
+
+int main() {
+	int n, num, re; re = 0;
+	cout << "Ingrese un numero, por favor:" << endl;
+	cin >> n;
+	cout << "La suma de los digitos del numero ingresado es igual a: " << endl;
+	num = n;
+	for (int c = 1; num>0; c) {
+		cout << dig(num) << " + " ;
+		re = re + dig(num);
+		num = num / 10;
+	}
+	cout << " = " << re;
+
+}
