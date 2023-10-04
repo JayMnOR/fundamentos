@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-int digito(int n);
+int Digito(int n);
 
 int main() {
 	int n, num, re; re = 0;
@@ -9,15 +9,15 @@ int main() {
 	cout << "La suma de los digitos del numero ingresado es igual a: " << endl;
 	num = n;
 	for (int c = 1; num>0; c) {
-		cout << dig(num) << " + " ;
-		re = re + dig(num);
+		cout << Digito(num) << " + " ;
+		re = re + Digito(num);
 		num = num / 10;
 	}
 	cout << " = " << re;
 
 }
 
-int digito(int n) {
+int Digito(int n) {
 	int d;
 	d = n % 10;
 	return d;
