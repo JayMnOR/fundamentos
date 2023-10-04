@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int f(int n);
+int main() {
+	int n;
+	cout << "Ingrese el numero al que desea obtener factorial "; cin >> n;
+	cout << "= " << f(n);
+}
+
+
+int f(int n) {
+	float f; f = 1;
+	cout << "El factorial de  " << n << "  es igual a: " << endl;
+	for (int c = 1; c <= n; c++)
+	{
+		cout << c << "x";
+		f = f * c;
+	}
+	return f;
+}
