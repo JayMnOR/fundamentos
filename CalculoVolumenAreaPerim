@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+float Perimetro(float a);
+float Area(float a);
+float Volumen(float a);
+int main()
+{
+	float a;
+	cout << "Ingrese el radio del circulo que desea calcular, por favor: " << endl;
+	cin >> a;
+	cout << "Calculo de Perimetro de una circunferencia: " << endl;
+	cout << "2 veces Pi x radio = Perimetro" << endl;
+	cout << "Perimetro = 2 x 3.14159 x " << a << endl;
+	cout << "Perimetro = " << Perimetro(a)<<endl;
+	cout << "" << endl;
+
+	cout << "Calculo de area de una circunferencia: " << endl;
+	cout << "Pi x radio al cuadrado = Area" << endl;
+	cout << "Area = 3.14159 x " << a << " al cuadrado" << endl;
+	cout << "Area = " << Area(a) << endl;
+	cout << "" << endl;
+
+	cout << "Calculo de volument de una esfera: " << endl;
+	cout << "4/3 x Pi x radio al cubo = Volumen" << endl;
+	cout << "Volumen =(4/3) x  3.14159 x " << a << " al cubo" << endl;
+	cout << "Volumen = " << Volumen(a) << endl;
+	cout << "" << endl;
+}
+
+float Perimetro(float a) {
+	float per;
+	per = 2*3.14159*a;
+	return per;
+}
+float Area(float a) {
+	float ar;
+	ar = a * 3.14159;
+	return ar;
+}
+float Volumen(float a) {
+	float vol;
+	vol = (1.33333) * 3.14159 * (a * a * a);
+	return vol;}
