@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int num;
+	char respuesta;
+	float precio, descuento, preciofinal, suma = 0;
+	cout << "Intorduzca el precio: (-999 para terminal)";
+	cin>>precio;
+	while(precio!=-999){
+		cout << "Introduzca el procentaje de descuento";
+		cin >> descuento;
+		preciofinal = precio - (precio * (descuento / 100));
+		suma += preciofinal;
+		cout << "El procio final con edscuento es de :" << preciofinal << endl;
+		cout << ""<<endl;
+		cout << "Intorduzca el precio: (-999 para terminal)";
+		cin >> precio;
+	}
+}
