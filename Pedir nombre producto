@@ -1,0 +1,26 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+	int num;
+	char respuesta;
+	float precio, descuento, preciofinal, suma = 0;
+	string nombre;
+	do {
+		cout << "Ingresa el nombre del cliente" << endl;
+		getline(cin, nombre);
+		cout << "Ingresa el numero de productos: ";
+	cin >> num;
+		cout << "Introduzca el precio siguiente: ";
+		cin >> precio;
+		cout << "Introduzca el procentaje de descuento";
+		cin >> descuento;
+		preciofinal = precio - (precio * (descuento / 100));
+		suma += preciofinal;
+		cout << "El procio final con descueto para el ciente "<<nombre<<" es de : " << preciofinal << endl;
+		cout << "Desea contiuar(s o S)?"; cin >> respuesta;
+		cin.ignore();
+	} while((respuesta=='S') || (respuesta == 's'));
+	return 0;
+}
