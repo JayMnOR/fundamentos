@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int num ;
+	char respuesta;
+	float precio, descuento, preciofinal, suma = 0;
+	cout << "Ingresa el numero de productos: ";
+	cin >> num;
+	do {
+		cout << "Introduzca el precio siguiente: ";
+		cin >> precio;
+		cout << "Introduzca el procentaje de descuento";
+		cin >> descuento;
+		preciofinal = precio - (precio * (descuento / 100));
+		suma += preciofinal;
+		cout << "El procio final con edscuento es de :" << preciofinal << endl;
+		cout << "Desea contiuar(s o S)?"; cin >> respuesta;
+	} while ((respuesta == 'S') || (respuesta == 's'));
+}
