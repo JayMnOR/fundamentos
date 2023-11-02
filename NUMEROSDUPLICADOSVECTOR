@@ -1,0 +1,37 @@
+#include <iostream>
+#define MAX 100
+using namespace std;
+
+    void cargar (float a[], int n);
+    void mostrar(int n, float vec[]);
+    void limpiar(float va[], int n, float vb[], int &m);
+
+int main(){
+    float va[MAX], vb[MAX]; int n, m;
+    cout<<"Ingresar la cantidad de elementos del vector:"<<endl;
+    cin>>n;
+    cargar(va, n);
+    limpiar(va, n, vb, m);
+    cout<<"El vector sin los elementos duplicados es: "<<endl;
+    mostrar(m, vb);
+}
+
+
+    void cargar (float a[], int n)
+    { for (int i = 0; i < n; i++)
+    { cout << "Ingresa el elemento" << i+ 1 << ": ";
+        cin >> a[i];  }}
+
+        void mostrar(int n, float vec[]){
+        for (int i=0; i<n; i++){cout<<"C"<<i+ 1<<" = "<<vec[i]<<endl;}}
+ 
+     void limpiar(float va[], int n, float vb[], int &m){ int l;
+         m=0; int j=0;
+         for (int i=0; i<n;i++){ l=3;
+             if (i==0){m=m;}
+             else{ for (int c=0; c<i; c++){ if(va[i]==va[c]){l=12;}}}
+             if (l==3){vb[j]=va[i]; m+=1; j++;}
+         }
+     }
+
+
