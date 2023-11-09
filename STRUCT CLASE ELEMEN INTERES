@@ -1,0 +1,208 @@
+include <iostream>
+#include <string>
+#include "stdlib.h"
+#define MAX 100
+using namespace std;
+
+struct tintereses
+{
+	int numero;
+	string interes;
+	string descripcion;
+	int estado;
+};
+
+tintereses v[MAX];
+
+
+int insertar();
+void listar(int n);
+void consultar(int n);
+void borrar(int n);
+void clasificar(int n);
+void modificar(int n);
+int main()
+{
+	int n, op; n = 0;
+	do {
+		system("cls");
+
+		cout << "MENU" << endl;
+		cout << "1. Insertar" << endl;
+		cout << "2. Listar" << endl;
+		cout << "3. Consultar" << endl;
+		cout << "4. Modificar" << endl;
+		cout << "5. Borrar" << endl;
+		cout << "6. Clasificar" << endl;
+		cout << "0. Salir" << endl;
+		cout << "Presione la opcion: ";
+		cin >> op;
+		switch (op)
+		{
+		case 1: n = insertar();
+			break;
+		case 2: listar(n);
+			break;
+		case 3: consultar(n);
+			break;
+		case 4: modificar(n);
+			break;
+		case 5: borrar(n);
+			break;
+		case 6: clasificar(n);
+			break;
+		case 0: cout << "Salir" << endl; break;
+
+		default: { 			system("cls");
+			cout << "Opcion invalida" << endl; system("pause"); }break;
+			if ((op > 0) && (op < 7)) { cout << "Desea continuar?"<<endl<<"1. Si"<<endl<<"0. No"<<endl;  cin >> op; }
+		}
+	} while (op != 0);
+	system("pause");
+	system("cls");
+	system("dir");
+}
+
+int insertar()
+{
+	int aux;
+	cout << "Ingrese el numero de elementos: ";
+	cin >> aux;
+	for (int i = 0; i < aux; i++)
+	{
+		cout << "ELEMENTO" << i + 1 << endl;
+		cout << "Ingrese el ID: ";
+		cin >> v[i].numero;
+		cout << "Ingrese interes: ";
+		cin.ignore();
+		getline(cin, v[i].interes);
+		cout << "Ingrese la descripcion: ";
+		getline(cin, v[i].descripcion);
+		v[i].estado = 0;
+		cout << "" << endl;
+		system("cls");
+	}
+	return aux;
+
+}
+void listar(int n)
+{
+	cout << "LISTADO" << endl;
+	if (n != 0) {
+		for (int i = 0; i < n; i++)
+		{
+			if (v[i].estado == 0)
+			{
+				cout << "Elemento " << i+1 << endl;
+				cout << "Numero: "<<v[i].numero << endl;
+				cout << "Interes: " << v[i].interes << endl;
+				cout << "Descripcion: " << v[i].descripcion << endl;
+				cout << ""<<endl;
+			}
+		}
+		system("pause"); system("cls");
+	}
+	else { cout << "No hay elementos"; system("pause"); system("cls"); }
+}
+void consultar(int n)
+{
+	int idelemento;
+	bool band = false;
+	cout << "Ingrese el elemento a buscar: ";
+	cin >> idelemento;
+	for (int i = 0; i < n; i++)
+	{
+		if (v[i].numero == idelemento)
+		{
+			cout << v[i].interes << "\t";
+			cout << v[i].descripcion << "\t";
+			band = true;
+		}
+	}
+	if (band == true)
+		cout << "Elemento encontrado";
+	else
+		cout << "Elemento no encntrado";
+
+}
+void modificar(int n)
+{
+	int idelemento;
+	bool band = false;
+	char resp;
+	cout << "Ingrese el elemento a modificar: ";
+	cin >> idelemento;
+	for (int i = 0; i < n; i++)
+	{
+		if (v[i].numero == idelemento)
+		{
+			cout << "INTERESES" << endl;
+			cout << v[i].interes << "\t";
+			cout << "Desea modificar el dato?"<<endl<<"coloque s para si"<<endl<<"coloque n para no";
+			cin >> resp; 
+			if (resp == 's')
+			{
+				cin.ignore();  getline(cin, v[i].interes);
+			}
+			cout << "DESCRIPCION" << endl;
+			cout << v[i].descripcion << "\t";
+			cout << "Desea modificar el dato?" << endl << "coloque s para si" << endl << "coloque n para no";
+			cin >> resp; 
+			if (resp == 's')
+			{
+				cin.ignore(); getline(cin, v[i].descripcion);
+			}
+			band = true;
+		}
+		
+	}
+	if (band == true)
+	{
+		cout << "Elemento encontrado y modificado"<<endl;
+
+	}
+	else
+	{
+		cout << "Elemento no encontrado"<<endl;
+
+	}
+	system("pause");
+	system("cls");
+}
+void borrar(int n)
+{
+	int idelemento;
+	bool band = false;
+	char resp;
+	cout << "Ingrese el elemento a modificar: ";
+	cin >> idelemento;
+	for (int i = 0; i < n; i++)
+	{
+		if (v[i].numero == idelemento)
+		{
+			v[i].estado = 9;
+			band = true;
+		}
+	}
+	if (band == true)
+		cout << "Elemento encontrado y borrado";
+	else
+		cout << "Elemento no encntrado";
+}
+void clasificar(int n)
+{
+	int carolina = v[0].numero; string helado = v[0].interes; string lokura = v[0].descripcion;
+	if (n != 0) {
+		for (int i = 0; i < n; i++) {
+			for (int c = 0; c < n; c++) {
+				if ((v[i].numero < v[c].numero) && (v[c].estado != 9)) {
+					carolina = v[i].numero; v[i].numero = v[c].numero; v[c].numero = carolina;
+					helado = v[i].interes; v[i].interes = v[c].interes; v[c].interes = helado;
+					lokura = v[i].descripcion; v[i].descripcion = v[c].descripcion; v[c].descripcion = lokura;
+				}
+			} 
+		} {cout << "Los elementos se clasificaron con exito, puede continuar" << endl << endl; system("pause");  }
+	}
+	else { cout << "no hay elementos para clasificar" << endl<<endl; system("pause");
+	}
+}
